@@ -200,8 +200,11 @@ select{
 }
 
 
-@media screen and (max-wdith: 330px){
+@media screen and (max-width: 330px){
     .survey {
-        width: 100vw;
+        width: 100%;
+    }
+    .survey__header,.survey__content{
+        width: 100%;
     }
 }
