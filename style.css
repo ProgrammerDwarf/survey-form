@@ -2,10 +2,10 @@
 
 :root{
     /* colors */
-    --primary-color: rgba(252, 253, 248,0.3);
-    --secundary-color: rgba(164, 177, 170, 0.5);
+    --primary-color: rgba(252, 253, 248,0.8);
+    --secundary-color: rgba(164, 177, 170, 0.9);
     --tertiary-color:  rgb(87, 123, 133);
-    --cuatertiary-color: rgba(87, 123, 133, 0.35);
+    --cuatertiary-color: rgba(87, 123, 133, 0.7);
     --title-font: 'fauna one', serif;
     --content-font: 'raleway', sans-serif;
 }
@@ -104,9 +104,11 @@ select{
     text-transform: capitalize;
     background: var(--cuatertiary-color);
     width: 50vw;
-    border-radius: 10px 10px 0 0;
-    padding: 1em;   
+    padding: 1em;  
+    position: relative; 
+    border-radius: 10px 10px 0 0 ;
 }
+
 .survey__header h1{
  color: whitesmoke;
  font-size: 2em;
@@ -198,3 +200,6 @@ select{
 }
 
 
+/* @media screen and (max-wdith: 330px){
+
+} */
