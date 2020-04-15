@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Fauna+One|Raleway&display=swap');
+
+:root{
+    /* colors */
+    --primary-color: rgba(252, 253, 248,0.3);
+    --secundary-color: rgba(164, 177, 170, 0.5);
+    --tertiary-color:  rgb(87, 123, 133);
+    --cuatertiary-color: rgba(87, 123, 133, 0.35);
+    --title-font: 'fauna one', serif;
+    --content-font: 'raleway', sans-serif;
+}
+
+        /* General settings */
+
+html, html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--cuatertiary-color);
+    background-color: rgb(170,185,178);
+    background: linear-gradient(180deg, rgba(170,185,178,0.2) 27%, rgba(83, 134, 117, 0.2) 68%, rgb(51, 54, 52) 100%), url(/images/pino-neblina.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2{
+    font-size: 1.25em;
+}
+h3{
+    font-size: 1em;
+    font-weight: normal;
+}
+h4{
+    font-size: 0.8em;
+    font-weight: normal;
+}
+h1,h2 {
+    font-family: var(--title-font);
+}
+h3,h4 {
+    font-family: var(--content-font);
+}
+p,span,li,label, input, select, option,textarea {
+    font-family: var(--content-font);
+    font-size: 1rem;
+}
+
+        /* Styles */
+
+input, textarea, select{
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;
+}
+
+label, input, textarea,select {
+    margin: 0 1em 0.5em;
+}
+
+select{
+    color: rgb(92, 92, 92);
+}
+
+        /* Container page */
+
+.survey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5em;
+    box-shadow: 0 15px 20px rgba(20, 44, 38, 0.5),
+                0 20px 2px 3px rgba(0,0,0,0.2),
+                0 5px 5px 2px rgba(0,0,0,.3);
+    border-radius: 10px;
+    width: 50vw;
+    margin: 2em 0;
+}
+
+        /*  Survey body:  header */
+
+.survey__header{
+    text-align: center;
+    text-transform: capitalize;
+    background: var(--cuatertiary-color);
+    width: 50vw;
+    border-radius: 10px 10px 0 0;
+    padding: 1em;   
+}
+.survey__header h1{
+ color: whitesmoke;
+ font-size: 2em;
+ margin: 1em 0 0.5em;
+}
+
+.survey__header p {
+    font-style: italic;
+    color: rgb(58, 75, 69);
+    font-weight: bolder;
+    margin: 1em 0 0.5em;
+}
+        /*  Survey body:  content */
+        
+.survey__content{
+    background: var(--secundary-color) ;
+    width: 50vw;
+    border-radius: 0 0 10px 10px ;
+    background: rgb(226, 224, 224, 0.5);
+}
+        /* Form content and items inside content (body) */
+
+.content__form{
+    width: 100%;
+}
+.content__items{
+    border-radius: 15px;
+    padding: 0.5em;
+    width: 100%;
+    margin: 0 ;
+    display: flex;
+    flex-direction: column;
+}
+        /* Checkbox buttons section */
+
+.checkbox__container{
+    display: flex;
+    flex-direction: column;
+}
+.checkbox__container h3 {
+    margin-left: 1em;
+    font-size: 1rem;
+}
+.checkbox__container .checkbox__items{
+    margin: 1em 1em 0;
+}
+.checkbox__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.checkbox__items div{
+    display: flex;
+}
+.checkbox__items div label{
+    margin-right: auto;
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+.checkbox__items div input{
+    margin-right: 2em;
+}
+
+        /* Radio buttons section */
+
+.radio__container{
+    display: flex;
+    flex-direction: column;
+}
+.radio__container h3 {
+    margin-left: 1em;
+    font-size: 1rem;
+}   
+.radio__items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
+.radio__items div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.content__items button {
+    width: 25%;
+    margin:  0 auto;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+
