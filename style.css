@@ -200,6 +200,8 @@ select{
 }
 
 
-/* @media screen and (max-wdith: 330px){
-
-} */
+@media screen and (max-wdith: 330px){
+    .survey {
+        width: 100vw;
+    }
+}
