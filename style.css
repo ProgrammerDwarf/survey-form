@@ -203,7 +203,7 @@ select{
 }
 
 .content__items button {
-    width: 20%;
+    width: 20vw;
     margin:  0 auto;
     border-radius: 5px;
     padding: 1em;
