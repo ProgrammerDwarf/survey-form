@@ -2,12 +2,14 @@
 
 :root{
     /* colors */
-    --primary-color: rgba(252, 253, 248,0.8);
-    --secundary-color: rgba(164, 177, 170, 0.9);
-    --tertiary-color:  rgb(87, 123, 133);
-    --cuatertiary-color: rgba(87, 123, 133, 0.7);
     --title-font: 'fauna one', serif;
     --content-font: 'raleway', sans-serif;
+    --flat-color-one: rgba(237, 227, 236, 1);
+    --flat-color-two: rgba(242, 242, 242, 0.5);
+    --flat-color-three:rgba(65, 82, 86, 1);
+    --flat-color-three-o:rgba(65, 82, 86, 0.8);
+    --flat-color-four: rgba(146, 220, 229, 1);
+    --flat-color-five: rgba(173, 59, 31, 1);
 }
 
         /* General settings */
@@ -20,7 +22,7 @@ html, html * {
 
 body {
     font-size: 18px;
-    background-color: var(--primary-color);
+    background-color: var(--flat-color-one);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,26 +35,29 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: var(--cuatertiary-color);
+    background: var(--flat-color-three);
     background-color: rgb(170,185,178);
-    background: linear-gradient(180deg, rgba(170,185,178,0.2) 27%, rgba(83, 134, 117, 0.2) 68%, rgb(51, 54, 52) 100%), url(/images/pino-neblina.jpg);
+    background: url(/images/pino-neblina.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 h1 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 h2{
-    font-size: 1.25em;
+    font-size: 1.3rem;
+    font-weight: bolder;
 }
 h3{
-    font-size: 1em;
-    font-weight: normal;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 h4{
-    font-size: 0.8em;
-    font-weight: normal;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 h1,h2 {
     font-family: var(--title-font);
@@ -62,7 +67,8 @@ h3,h4 {
 }
 p,span,li,label, input, select, option,textarea {
     font-family: var(--content-font);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
         /* Styles */
@@ -89,12 +95,11 @@ select{
     align-items: center;
     flex-direction: column;
     line-height: 1.5em;
-    box-shadow: 0 15px 20px rgba(20, 44, 38, 0.5),
-                0 20px 2px 3px rgba(0,0,0,0.2),
+    box-shadow: 0 20px 2px 3px rgba(0,0,0,0.2),
                 0 5px 5px 2px rgba(0,0,0,.3);
     border-radius: 10px;
     width: 50vw;
-    margin: 2em 0;
+    margin: 1.25em 0;
 }
 
         /*  Survey body:  header */
@@ -102,7 +107,7 @@ select{
 .survey__header{
     text-align: center;
     text-transform: capitalize;
-    background: var(--cuatertiary-color);
+    background: var(--flat-color-three);
     width: 50vw;
     padding: 1em;  
     position: relative; 
@@ -117,17 +122,19 @@ select{
 
 .survey__header p {
     font-style: italic;
-    color: rgb(58, 75, 69);
+    color: var(--flat-color-one);
     font-weight: bolder;
     margin: 1em 0 0.5em;
+    font-size: 1em;
 }
         /*  Survey body:  content */
         
 .survey__content{
-    background: var(--secundary-color) ;
+    background: var(--flat-color-three-o);
     width: 50vw;
     border-radius: 0 0 10px 10px ;
-    background: rgb(226, 224, 224, 0.5);
+    color: var(--flat-color-one);
+    padding-bottom: 1em;
 }
         /* Form content and items inside content (body) */
 
@@ -142,6 +149,9 @@ select{
     display: flex;
     flex-direction: column;
 }
+.content__items input,select,textarea {
+    font-size: 1rem;
+}
         /* Checkbox buttons section */
 
 .checkbox__container{
@@ -150,7 +160,7 @@ select{
 }
 .checkbox__container h3 {
     margin-left: 1em;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 .checkbox__container .checkbox__items{
     margin: 1em 1em 0;
@@ -179,7 +189,7 @@ select{
 }
 .radio__container h3 {
     margin-left: 1em;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }   
 .radio__items{
     display: grid;
@@ -193,16 +203,38 @@ select{
 }
 
 .content__items button {
-    width: 25%;
+    width: 20%;
     margin:  0 auto;
     border-radius: 5px;
     padding: 1em;
+    color: rgba(237, 227, 236, 1);
+    background-color: rgb(177, 70, 43);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: var(--content-font);
+    box-shadow: 0 2px 2px 0 rgba(14, 13, 13,0.5),
+                0 3px  3px 0 rgba(0,0,0,.3);
+    transition: all 0.1s ease-in ;
+}
+.content__items button:hover {
+    transform: scale(1.02);
+    background-color: rgb(157, 50, 23);
+    box-shadow: 0 2px 5px 0 rgba(14, 13, 13,0.5),
+    0 3px  5px 0 rgba(0,0,0,.3);
+}
+.content__items button:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 2px 0 rgba(14, 13, 13,0.7),
+    0 1px  3px 0 rgba(0,0,0,.5);
 }
 
 
 @media screen and (max-width: 698px){
-    .survey {
+    .survey, .survey >* {
         width: 100%;
+        border-radius: 0;
+        margin: 0;
     }
     .survey__header,.survey__content{
         width: 100%;
